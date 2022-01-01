@@ -1,17 +1,122 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-11T22:08:30-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2021/12/11/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2021-12-11T21:56:55-08:00</published><updated>2021-12-11T21:56:55-08:00</updated><id>http://localhost:4000/jekyll/update/2021/12/11/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2021/12/11/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-31T17:10:47-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">jrhand</title><subtitle>Security writeups.</subtitle><entry><title type="html">TryHackMe Room Walkthrough: Upload Vulnerabilities</title><link href="http://localhost:4000/2021/12/28/welcome-to-jekyll.html" rel="alternate" type="text/html" title="TryHackMe Room Walkthrough: Upload Vulnerabilities" /><published>2021-12-28T21:56:55-08:00</published><updated>2021-12-28T21:56:55-08:00</updated><id>http://localhost:4000/2021/12/28/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2021/12/28/welcome-to-jekyll.html">&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Things inside ticks look like code&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;uvw_banner.png&quot; alt=&quot;room banner&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;h2 id=&quot;task-1&quot;&gt;Task 1:&lt;/h2&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;Tom&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &apos;Hi, Tom&apos; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;In Task 1, you will deploy the vulnerable machine and then edit the hosts file on your system or attack box.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;&lt;strong&gt;Linux/Mac OS:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Enter the following command in a terminal to update your hosts file with a new entry, allowing the urls used throughout the room to resolve to the correct ip address:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;echo &quot;10.10.47.131    overwrite.uploadvulns.thm shell.uploadvulns.thm java.uploadvulns.thm annex.uploadvulns.thm magic.uploadvulns.thm jewel.uploadvulns.thm demo.uploadvulns.thm&quot; | sudo tee -a /etc/hosts&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Enter the following command to return your hosts file to normal:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo sed -i &apos;$d&apos; /etc/hosts&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Windows OS:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Enter the following command in Powershell:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AC C:\Windows\System32\drivers\etc\hosts &quot;10.10.47.131   overwrite.uploadvulns.thm shell.uploadvulns.thm java.uploadvulns.thm annex.uploadvulns.thm magic.uploadvulns.thm jewel.uploadvulns.thm demo.uploadvulns.thm&quot; &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Enter the following command to return your hosts file to normal:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(GC C:\Windows\System32\drivers\etc\hosts | select -Skiplast 1) | SC C:\Windows\System32\drivers\etc\hosts&lt;/code&gt;##&lt;/p&gt;
+
+&lt;h2 id=&quot;task-23&quot;&gt;Task 2,3:&lt;/h2&gt;
+
+&lt;p&gt;Read through the introduction and background info, and install gobuster if needed.&lt;/p&gt;
+
+&lt;h2 id=&quot;task-4&quot;&gt;Task 4:&lt;/h2&gt;</content><author><name></name></author><category term="writeup" /><category term="tryhackme" /><category term="walkthrough" /><category term="web" /><summary type="html">Things inside ticks look like code</summary></entry><entry><title type="html">Tutorial: Set Up a Parrot OS VM in VirtualBox (For Use on TryHackMe Challenges)</title><link href="http://localhost:4000/2021/12/28/setup-parrotos-vm-for-tryhackme.html" rel="alternate" type="text/html" title="Tutorial: Set Up a Parrot OS VM in VirtualBox (For Use on TryHackMe Challenges)" /><published>2021-12-28T13:00:00-08:00</published><updated>2021-12-28T13:00:00-08:00</updated><id>http://localhost:4000/2021/12/28/setup-parrotos-vm-for-tryhackme</id><content type="html" xml:base="http://localhost:4000/2021/12/28/setup-parrotos-vm-for-tryhackme.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;Using Linux virtual machines to complete challenges on platforms like &lt;a href=&quot;https://tryhackme.com/&quot;&gt;TryHackMe&lt;/a&gt; or &lt;a href=&quot;https://www.hackthebox.com/&quot;&gt;HackTheBox&lt;/a&gt; allows us to take advantage of (and learn) powerful, lightweight operating systems without altering our personal computers. Unlike the in-browser AttackBox provided by TryHackMe, which will revert to its original state when terminated, you will have to freedom to customize your virtual machine as needed, and more easily save the tools you use and document your progress.&lt;/p&gt;
+
+&lt;p&gt;Operating systems like Kali Linux and Parrot OS are both popular options for ethical hacking and pentesting, and both come with a variety of security and pentesting tools preinstalled. In this tutorial we’ll be using Parrot OS.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;An important note:&lt;/strong&gt; These tools are meant for ethical and legal use. TryHackMe provides vulnerable machines to attack for the purpose of learning; you should never attack, perform intrusive reconnaissance, or conduct a penetration test on a real target unless you are authorized to do so.&lt;/p&gt;
+
+&lt;p&gt;In this tutorial we will…&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Download Parrot OS&lt;/li&gt;
+  &lt;li&gt;Install VirtualBox&lt;/li&gt;
+  &lt;li&gt;Create a new VM&lt;/li&gt;
+  &lt;li&gt;Install Parrot OS&lt;/li&gt;
+  &lt;li&gt;Connect to TryHackMe with OpenVPN&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Versions used in this tutorial:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;VirtualBox 6.1.30&lt;/li&gt;
+  &lt;li&gt;Parrot Security 4.11.3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;download-parrot-os&quot;&gt;Download Parrot OS&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Visit https://parrotsec.org/download/ and select ‘Get Security Edition’.&lt;/li&gt;
+  &lt;li&gt;Select ‘Download’ under ‘MATE Desktop’, and save the .iso file in a folder dedicated to your VMs.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;install-virtualbox&quot;&gt;Install VirtualBox&lt;/h1&gt;
+
+&lt;p&gt;VirtualBox is a free hypervisor - a software application that allows us to deploy and manage virtual machines through an easy-to-use interface. VMWare Player is another free alternative.&lt;/p&gt;
+
+&lt;p&gt;For a more comprehensive resource on VirtualBox, visit https://www.virtualbox.org/manual/.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Visit https://www.virtualbox.org/ and select Downloads.&lt;/li&gt;
+  &lt;li&gt;Select and download the VirtualBox platform package meant for your operating system.&lt;/li&gt;
+  &lt;li&gt;You can check the integrity of the downloaded .exe by comparing its SHA256 hash with the checksum provided by VirtualBox. (A link to the SHA256 checksums can be found on the Downloads page.) If you are using Windows, you can compute the hash of file with the command: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;certutil -hashfile &amp;lt;FILEPATH&amp;gt; SHA256&lt;/code&gt; (where FILEPATH is the location of the .exe)
+&lt;img src=&quot;/images/certutil.png&quot; alt=&quot;Computing the hash of the .exe&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Run the installer and start VirtualBox once the installation is complete.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;create-a-new-vm&quot;&gt;Create a new VM&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Select ‘New’ to create a new VM.
+&lt;img src=&quot;/images/vb1.png&quot; alt=&quot;Select New&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Name your VM so you can identify it later, select the type as ‘Linux’ and the version as ‘Debian (64-bit)’, then select ‘Next’.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/vb2.png&quot; alt=&quot;New VM&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Select the amount of memory to allocate, then select ‘Next’. (In this example I allocate 8GB. Depending on your system and needs you may want more or less, and you can always adjust this later in your VM’s settings in VirtualBox if you have any performance issues.)
+&lt;img src=&quot;/images/vb3.png&quot; alt=&quot;Allocate RAM&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Select ‘Create a virtual hard disk now’, then select ‘Create’&lt;/li&gt;
+  &lt;li&gt;Select ‘VDI’, then select ‘Next’&lt;/li&gt;
+  &lt;li&gt;Select ‘Fixed Size’, then select ‘Next’&lt;/li&gt;
+  &lt;li&gt;Set the disk size to at least 15 GB, then select ‘Create’
+&lt;img src=&quot;/images/vb4.png&quot; alt=&quot;Disk size&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Select your new virtual machine, then select ‘Settings’&lt;/li&gt;
+  &lt;li&gt;In the ‘Network’ section, expand ‘Advanced’ and change the adapter type to ‘PCnet-PCI II’
+&lt;img src=&quot;/images/vb5.png&quot; alt=&quot;Adapter type&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;Power on your new virtual machine by double clicking it in VirtualBox, or by selecting the machine and then clicking ‘Start’&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;install-parrot-os&quot;&gt;Install Parrot OS&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;When you power on the VM, you will be asked to select a start up disk. Click the folder icon to open the Optical Disk Selector, click ‘Add’, and locate the .iso file you downloaded earlier&lt;/li&gt;
+  &lt;li&gt;Make sure the Parrot OS .iso is selected, then select ‘Choose’&lt;/li&gt;
+  &lt;li&gt;Select ‘Start’, and wait for the OS to boot automatically or press your Enter key when you see the Try/Install option&lt;/li&gt;
+  &lt;li&gt;Double click ‘Install Parrot’ on the desktop&lt;/li&gt;
+  &lt;li&gt;In the Parrot OS Installer, select your timezone, select ‘Erase Disk’ in Partitions, and enter your desired username and password in the Users tab. Then select ‘Install’, ‘Install Now’, and ‘Finish’ once the installation is complete&lt;/li&gt;
+  &lt;li&gt;Restart the VM and login!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;connect-to-tryhackme-with-openvpn&quot;&gt;Connect to TryHackMe with OpenVPN&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open a browser, navigate to tryhackme.com and login.&lt;/li&gt;
+  &lt;li&gt;Click on your user icon in the top right hand corner, and select ‘Access’ from the drop down menu.&lt;/li&gt;
+  &lt;li&gt;Select a VPN server and click on ‘Download My Configuration File’&lt;/li&gt;
+  &lt;li&gt;Save &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;YOUR USERNAME&amp;gt;.ovpn&lt;/code&gt; in an easy to remember location&lt;/li&gt;
+  &lt;li&gt;In a terminal, enter the command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo openvpn &amp;lt;FILEPATH&amp;gt;&lt;/code&gt;, where FILEPATH is the location of your .ovpn file. You should see &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Initialization Sequence Completed&lt;/code&gt; if the connection is successful. Keep this terminal open in the background while you’re interacting with TryHackMe’s vulnerable machines, closing it will terminate the connection.
+&lt;img src=&quot;/images/openvpn.png&quot; alt=&quot;OpenVPN&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/openvpn2.png&quot; alt=&quot;OpenVPN&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="tutorial" /><summary type="html">Introduction</summary></entry></feed>

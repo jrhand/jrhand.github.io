@@ -1,0 +1,34 @@
+I"Q<p><code class="language-plaintext highlighter-rouge">Things inside ticks look like code</code></p>
+
+<p>Jekyll requires blog post files to be named according to the following format:</p>
+
+<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+
+<p><img src="uvw_banner.png" alt="room banner" /></p>
+
+<h2 id="task-1">Task 1:</h2>
+
+<p>In Task 1, you will deploy the vulnerable machine and then edit the hosts file on your system or attack box.</p>
+
+<p><strong>Linux/Mac OS:</strong></p>
+
+<p>Enter the following command in a terminal to update your hosts file with a new entry, allowing the urls used throughout the room to resolve to the correct ip address:
+<code class="language-plaintext highlighter-rouge">echo "10.10.47.131    overwrite.uploadvulns.thm shell.uploadvulns.thm java.uploadvulns.thm annex.uploadvulns.thm magic.uploadvulns.thm jewel.uploadvulns.thm demo.uploadvulns.thm" | sudo tee -a /etc/hosts</code></p>
+
+<p>Enter the following command to return your hosts file to normal:
+<code class="language-plaintext highlighter-rouge">sudo sed -i '$d' /etc/hosts</code></p>
+
+<p><strong>Windows OS:</strong></p>
+
+<p>Enter the following command in Powershell:
+<code class="language-plaintext highlighter-rouge">AC C:\Windows\System32\drivers\etc\hosts "10.10.47.131   overwrite.uploadvulns.thm shell.uploadvulns.thm java.uploadvulns.thm annex.uploadvulns.thm magic.uploadvulns.thm jewel.uploadvulns.thm demo.uploadvulns.thm" </code></p>
+
+<p>Enter the following command to return your hosts file to normal:
+<code class="language-plaintext highlighter-rouge">(GC C:\Windows\System32\drivers\etc\hosts | select -Skiplast 1) | SC C:\Windows\System32\drivers\etc\hosts</code>##</p>
+
+<h2 id="task-23">Task 2,3:</h2>
+
+<p>Read through the introduction and background info, and install gobuster if needed.</p>
+
+<h2 id="task-4">Task 4:</h2>
+:ET
