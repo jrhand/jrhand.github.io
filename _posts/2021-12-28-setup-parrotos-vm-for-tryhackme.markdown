@@ -79,7 +79,7 @@ For a more comprehensive resource on VirtualBox, visit https://www.virtualbox.or
 3. Select a VPN server and click on 'Download My Configuration File'
 4. Save `<YOUR USERNAME>.ovpn` in an easy to remember location
 5. In a terminal, enter the command `sudo openvpn <FILEPATH>`, where FILEPATH is the location of your .ovpn file. You should see `Initialization Sequence Completed` if the connection is successful. Keep this terminal open in the background while you're interacting with TryHackMe's vulnerable machines, closing it will terminate the connection.
-![OpenVPN command](/images/openvpn.png)
+![OpenVPN command](/images/openvpn.PNG)
 
 
-![OpenVPN connected](/images/openvpn2.png)
+![OpenVPN connected](/images/openvpn2.PNG)

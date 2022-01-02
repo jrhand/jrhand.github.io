@@ -1,36 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-31T17:10:47-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">jrhand</title><subtitle>Security writeups.</subtitle><entry><title type="html">TryHackMe Room Walkthrough: Upload Vulnerabilities</title><link href="http://localhost:4000/2021/12/28/welcome-to-jekyll.html" rel="alternate" type="text/html" title="TryHackMe Room Walkthrough: Upload Vulnerabilities" /><published>2021-12-28T21:56:55-08:00</published><updated>2021-12-28T21:56:55-08:00</updated><id>http://localhost:4000/2021/12/28/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/2021/12/28/welcome-to-jekyll.html">&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Things inside ticks look like code&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;uvw_banner.png&quot; alt=&quot;room banner&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;task-1&quot;&gt;Task 1:&lt;/h2&gt;
-
-&lt;p&gt;In Task 1, you will deploy the vulnerable machine and then edit the hosts file on your system or attack box.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Linux/Mac OS:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Enter the following command in a terminal to update your hosts file with a new entry, allowing the urls used throughout the room to resolve to the correct ip address:
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;echo &quot;10.10.47.131    overwrite.uploadvulns.thm shell.uploadvulns.thm java.uploadvulns.thm annex.uploadvulns.thm magic.uploadvulns.thm jewel.uploadvulns.thm demo.uploadvulns.thm&quot; | sudo tee -a /etc/hosts&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Enter the following command to return your hosts file to normal:
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo sed -i &apos;$d&apos; /etc/hosts&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Windows OS:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Enter the following command in Powershell:
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;AC C:\Windows\System32\drivers\etc\hosts &quot;10.10.47.131   overwrite.uploadvulns.thm shell.uploadvulns.thm java.uploadvulns.thm annex.uploadvulns.thm magic.uploadvulns.thm jewel.uploadvulns.thm demo.uploadvulns.thm&quot; &lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Enter the following command to return your hosts file to normal:
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(GC C:\Windows\System32\drivers\etc\hosts | select -Skiplast 1) | SC C:\Windows\System32\drivers\etc\hosts&lt;/code&gt;##&lt;/p&gt;
-
-&lt;h2 id=&quot;task-23&quot;&gt;Task 2,3:&lt;/h2&gt;
-
-&lt;p&gt;Read through the introduction and background info, and install gobuster if needed.&lt;/p&gt;
-
-&lt;h2 id=&quot;task-4&quot;&gt;Task 4:&lt;/h2&gt;</content><author><name></name></author><category term="writeup" /><category term="tryhackme" /><category term="walkthrough" /><category term="web" /><summary type="html">Things inside ticks look like code</summary></entry><entry><title type="html">Tutorial: Set Up a Parrot OS VM in VirtualBox (For Use on TryHackMe Challenges)</title><link href="http://localhost:4000/2021/12/28/setup-parrotos-vm-for-tryhackme.html" rel="alternate" type="text/html" title="Tutorial: Set Up a Parrot OS VM in VirtualBox (For Use on TryHackMe Challenges)" /><published>2021-12-28T13:00:00-08:00</published><updated>2021-12-28T13:00:00-08:00</updated><id>http://localhost:4000/2021/12/28/setup-parrotos-vm-for-tryhackme</id><content type="html" xml:base="http://localhost:4000/2021/12/28/setup-parrotos-vm-for-tryhackme.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-01T17:03:37-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">jrhand</title><subtitle>Security writeups, walkthroughs, tutorials.</subtitle><entry><title type="html">Tutorial: Set Up a Parrot OS VM in VirtualBox (For Use on TryHackMe Challenges)</title><link href="http://localhost:4000/2021/12/28/setup-parrotos-vm-for-tryhackme.html" rel="alternate" type="text/html" title="Tutorial: Set Up a Parrot OS VM in VirtualBox (For Use on TryHackMe Challenges)" /><published>2021-12-28T13:00:00-08:00</published><updated>2021-12-28T13:00:00-08:00</updated><id>http://localhost:4000/2021/12/28/setup-parrotos-vm-for-tryhackme</id><content type="html" xml:base="http://localhost:4000/2021/12/28/setup-parrotos-vm-for-tryhackme.html">&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 
 &lt;p&gt;Using Linux virtual machines to complete challenges on platforms like &lt;a href=&quot;https://tryhackme.com/&quot;&gt;TryHackMe&lt;/a&gt; or &lt;a href=&quot;https://www.hackthebox.com/&quot;&gt;HackTheBox&lt;/a&gt; allows us to take advantage of (and learn) powerful, lightweight operating systems without altering our personal computers. Unlike the in-browser AttackBox provided by TryHackMe, which will revert to its original state when terminated, you will have to freedom to customize your virtual machine as needed, and more easily save the tools you use and document your progress.&lt;/p&gt;
 
@@ -116,7 +84,7 @@
   &lt;li&gt;Select a VPN server and click on ‘Download My Configuration File’&lt;/li&gt;
   &lt;li&gt;Save &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;YOUR USERNAME&amp;gt;.ovpn&lt;/code&gt; in an easy to remember location&lt;/li&gt;
   &lt;li&gt;In a terminal, enter the command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo openvpn &amp;lt;FILEPATH&amp;gt;&lt;/code&gt;, where FILEPATH is the location of your .ovpn file. You should see &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Initialization Sequence Completed&lt;/code&gt; if the connection is successful. Keep this terminal open in the background while you’re interacting with TryHackMe’s vulnerable machines, closing it will terminate the connection.
-&lt;img src=&quot;/images/openvpn.png&quot; alt=&quot;OpenVPN&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/images/openvpn.PNG&quot; alt=&quot;OpenVPN command&quot; /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/openvpn2.png&quot; alt=&quot;OpenVPN&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="tutorial" /><summary type="html">Introduction</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/images/openvpn2.PNG&quot; alt=&quot;OpenVPN connected&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="tutorial" /><summary type="html">Introduction</summary></entry></feed>
